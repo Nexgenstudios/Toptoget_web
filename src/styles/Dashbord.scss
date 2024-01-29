@@ -1,0 +1,274 @@
+@media(max-width: 1023px) {
+  .layoutView {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.FaRegBell {
+  &:hover {
+    animation: tada 1s infinite;
+  }
+}
+
+.FaUser {
+  &:hover {
+    background-color: #F4F8E2;
+
+    span {
+      color: #588A7A;
+      font-weight: 600;
+    }
+
+    .FaUsericon {
+      background-color: white;
+    }
+  }
+}
+
+// .contentPart {
+//   height: calc(100vh - 130px);
+//   overflow-y: hidden;
+//   overflow-x: hidden;
+
+//   &::-webkit-scrollbar-track {
+//     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//     background-color: #5f9683;
+//     border-radius: 5px;
+//   }
+
+//   &::-webkit-scrollbar {
+//     width: 6px;
+//     background-color: #808986;
+//   }
+
+//   &::-webkit-scrollbar-thumb {
+//     border-radius: 5px;
+//     background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(102, 175, 147)), color-stop(0.72, rgb(98, 174, 145)), color-stop(0.86, rgb(108 160 141)))
+//   }
+// }
+
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.getfont {
+  color: #DBDBDB;
+  font-family: inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.rigtbtnbg {
+  border-radius: 12px;
+  border: 1px solid #96C872;
+  background: #6FA292;
+  color: #96C872;
+}
+
+.defont {
+  color: #565656;
+  font-family: inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.nameravifont {
+  color: #797979;
+  font-family: inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.m5font {
+  color: #797979;
+  font-family: inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.Assbtn {
+  border-radius: 20px;
+  border: 2px solid #ABD28E;
+  color: #74A650;
+  font-family: inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.dashbordflex {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+}
+
+.layoutwidth {
+  width: 70%;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0rem;
+  border-radius: 30px;
+}
+
+.layoutwidth1 {
+  width: 30%;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0rem;
+  border-radius: 30px;
+}
+
+.cardnotification {
+  border-radius: 52px 0px;
+  border: 1px solid #588A7A;
+  background: linear-gradient(45deg, #DEF7CB 50%, #ABD28E 50%);
+  transition: margin-right 4s;
+}
+
+.responsive_nav {
+  overflow: scroll;
+  overflow-x: hidden;
+  transform: translateX(100vh);
+  top: 0%;
+  right: 48%;
+  border-radius: 30px 0px;
+  border: 1px solid #588A7A;
+  background: linear-gradient(45deg, #DEF7CB 5%, #ABD28E 50%);
+  height: 100vh;
+  width: 50vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.notifont {
+  color: #74A650;
+  font-family: inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.carddniyal {
+  border-radius: 19px;
+  border: 1px solid #96C872;
+  background: rgba(255, 255, 255, 0.78);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  // height: 82px;
+}
+
+.content_bspan {
+  color: #9A9A9A;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.Danial_font {
+  color: #4C4C4C;
+  font-family: inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.pizfont {
+  color: #9A9A9A;
+  font-family: inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.overflowhome {
+  overflow: hidden;
+}
+
+.textdashboard{
+  text-align: start;
+}
+
+@media(max-width: 1024px) {
+  .textdashboard{
+    text-align: center;
+  }
+  .overflowhome {
+    overflow: scroll;
+  }
+
+  .responsive_nav {
+    transform: translateX(100vh);
+    top: 0%;
+    right: 40rem;
+    border-radius: 30px 0px;
+    border: 1px solid #588A7A;
+    background: linear-gradient(45deg, #DEF7CB 5%, #ABD28E 50%);
+    height: 100%;
+    width: 50vh;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .dashbordflex {
+    display: flex;
+    gap: 0rem;
+    flex-direction: column;
+  }
+
+  .contentPart {
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .layoutwidth {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem 0rem;
+    border-radius: 10px;
+  }
+
+  .layoutwidth1 {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem 0rem;
+    border-radius: 10px;
+  }
+}

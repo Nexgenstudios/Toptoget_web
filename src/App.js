@@ -1,0 +1,31 @@
+import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NoPage from './NoPage';
+import Layout from './Components/Layout';
+import Dashboard from './Components/Dashboard';
+import Menu from './pages/Menu';
+import Profile from './pages/Profile';
+import Orders from './pages/Orders';
+import Settings from './pages/Settings';
+import Help from './pages/Help';
+import Myprofile from './pages/Myprofile';
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/Menu" element={<Menu />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Orders" element={<Orders />} />
+          <Route path="/Settings" element={<Settings />} />
+          <Route path="/Help" element={<Help />} />
+          <Route path="/myprofile" element={<Myprofile />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+
+  );
+}
+export default App;

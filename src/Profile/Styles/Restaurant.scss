@@ -1,0 +1,246 @@
+.contentPartreast {
+    height: calc(100vh - 130px);
+    // overflow-y: hidden;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar-track {
+        //   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        //   background-color: #808986;
+        position: absolute;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar {
+        position: absolute;
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        position: absolute;
+        border-radius: 5px;
+        background-color: #969797;
+        //   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(102, 175, 147)), color-stop(0.72, rgb(98, 174, 145)), color-stop(0.86, rgb(108 160 141)))
+    }
+}
+
+.cardrest {
+    background: #FFF;
+    border: 1px solid #D1D1D1;
+    // height: 40vh;
+    margin: 1.5rem 1rem 1rem 1rem;
+    border-radius: 30px;
+    padding: 0rem 1rem;
+    // overflow: scroll;
+    // overflow-x: hidden;
+    // height: 65vh;
+}
+
+.toprest {
+    border-radius: 9px;
+    border: 1px solid #565656;
+    width: 30%;
+    margin-left: 2%;
+    margin-top: -1rem;
+    background: #FFF;
+    text-align: center;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+    color: #565656;
+    font-family: inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Savebtnrest {
+    border-radius: 13px;
+    border: 1px solid #5A8D7D;
+    background: rgba(150, 200, 114, 0.34);
+    color: #FFF;
+    font-family: inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.onerfontstyle {
+    margin-top: -1rem;
+    color: #565656;
+    font-family: inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.labelfontrest {
+    color: #9A9A9A;
+    font-family: inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.inputrest {
+    height: 42px;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 1px solid #74A650;
+    background: #F8FFF3;
+    width: 100%;
+    padding-left: 10px;
+    color: #9A9A9A;
+    font-family: inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.inputrestaddress {
+    height: 75%;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 1px solid #74A650;
+    background: #F8FFF3;
+    width: 100%;
+    padding-left: 10px;
+    color: #9A9A9A;
+    font-family: inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.mapcard {
+    border-radius: 16px;
+    border: 1px solid #96C872;
+    background: lightgray 0px -219.712px / 100% 286.383% no-repeat;
+    height: 316px;
+    width: 100%;
+}
+
+.addbtnrest {
+    color: #96C872;
+    font-family: inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Submitbtnreat {
+    border-radius: 28.322px;
+    background: #588A7A;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 29.608px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.margirowrest {
+    margin: 0rem 0.5rem;
+}
+
+.padingcolrest {
+    padding: 0rem 1rem;
+}
+
+.browscard {
+    border-radius: 22px;
+    border: 1px dashed #CAE3B7;
+    background: rgba(241, 255, 231, 0.64);
+}
+
+.Uploadfont {
+    color: #CAE3B7;
+    font-family: inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.dargfont {
+    color: #9A9A9A;
+    font-family: inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.brosefont {
+    color: #4C4C4C;
+    font-family: inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+@media(max-width: 768px) {
+    .padingcolrest {
+        padding: 0rem 0rem;
+    }
+
+    .margirowrest {
+        margin: 0rem 0.5rem;
+    }
+
+    .onerfontstyle {
+        margin-top: 0rem;
+        color: #565656;
+        font-family: inter;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .Savebtnrest {
+        border-radius: 13px;
+        border: 1px solid #5A8D7D;
+        background: rgba(150, 200, 114, 0.34);
+        color: #FFF;
+        font-family: inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0.5rem 0rem;
+    }
+
+    .cardrest {
+        background: #FFF;
+        border: 1px solid #D1D1D1;
+        height: 100%;
+        margin: 1.5rem 0rem 1rem 0rem;
+        border-radius: 30px;
+        padding: 0rem 0.2rem;
+    }
+
+    .toprest {
+        border-radius: 9px;
+        border: 1px solid #565656;
+        width: 100%;
+        margin-left: 0%;
+        margin-top: -1rem;
+        background: #FFF;
+        text-align: center;
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+        color: #565656;
+        font-family: inter;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
