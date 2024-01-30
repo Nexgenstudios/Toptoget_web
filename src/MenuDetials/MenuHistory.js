@@ -5,13 +5,12 @@ import { FaUser } from "react-icons/fa";
 import profilelogo1 from "../assets/images/profilelogo1.png"
 import { FaEye } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import MenuEditor from "../MenuDetials/MenuEditor";
 import { IoMdSearch } from "react-icons/io";
 import { FormGroup, Input } from "reactstrap";
 import { Disclosure } from "@headlessui/react";
 import { BsX } from "react-icons/bs";
 import { notification } from "../Mock/DashboardMock"
-const Menu = ({ childran }) => {
+const MenuHistory = ({ childran }) => {
     const [selectedMenu, setSelectedMenu] = useState("Dashboard");
 
     const [username, setUsername] = useState('');
@@ -166,7 +165,7 @@ const Menu = ({ childran }) => {
                                     <div className="southmenu">
                                         <div>{p.southitem}</div>
                                         <FormGroup switch>
-                                            <Input type="switch" role="switch" className="switchinput" key={index} checked={p.id ? state : !state}
+                                            <Input type="switch" role="switch" className="switchinput" key={index} checked={state}
                                                 onClick={() => {
                                                     setState(!state);
                                                 }} />
@@ -234,4 +233,4 @@ const Menu = ({ childran }) => {
     )
 }
 
-export default Menu
+export default MenuHistory

@@ -36,13 +36,7 @@ const Restaurant = () => {
                 isValidationFailed: true
             }
         }
-        // if (formData.Mobile_number === '') {
-        //     errorMessage = {
-        //         ...errorMessage,
-        //         Mobile_number: "Please enter the Mobile number",
-        //         isValidationFailed: true
-        //     }
-        // }
+       
         if (formData.Landline_number === '') {
             errorMessage = {
                 ...errorMessage,
@@ -57,33 +51,6 @@ const Restaurant = () => {
                 isValidationFailed: true
             }
         }
-        // else {
-        //     if (personalInfo.idProofType === ID_TYPE.PANCARD) {
-        //         if (formData.id_proof.length !== 10) {
-        //             errorMessage = { ...errorMessage, id_proof: 'Enter valid Pancard no of 10 characters', isValidationFailed: true }
-        //         }
-        //     } else if (personalInfo.idProofType === ID_TYPE.AADHAR) {
-        //         if (formData.id_proof.length !== 12) {
-        //             errorMessage = { ...errorMessage, id_proof: 'Enter valid Aadhar number of 12 digits', isValidationFailed: true }
-        //         }
-        //     } else if (personalInfo.idProofType === ID_TYPE.PASSPORT) {
-        //         if (formData.id_proof.length !== 7) {
-        //             errorMessage = { ...errorMessage, id_proof: 'Enter valid Passport no of 7 characters', isValidationFailed: true }
-        //         }
-        //     }
-        // }
-        // if (formData.email !== '') {
-        //     let isEmailValid = validateEmail(formData.email);
-        //     if (!isEmailValid) {
-        //         errorMessage = { ...errorMessage, email: 'Enter Valid Email ID', isValidationFailed: true }
-        //     }
-        // }
-        // else {
-        //     errorMessage = {
-        //         ...errorMessage,
-        //         email: "Please Enter The Email ID"
-        //     }
-        // }
         if (formData.Address === '') {
             errorMessage = {
                 ...errorMessage,
