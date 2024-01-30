@@ -39,7 +39,7 @@ const SidebarMenu = ({ open, setOpen, onMenuClick }) => {
     const location = useLocation();
     const [url, setUrl] = useState(null);
     useEffect(() => {
-      setUrl(location.pathname);
+        setUrl(location.pathname);
     }, [location]);
     return (
         <div>

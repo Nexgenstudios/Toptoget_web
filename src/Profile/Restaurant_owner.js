@@ -4,27 +4,39 @@ import { FiUploadCloud } from "react-icons/fi";
 const Restaurant_owner = () => {
   return (
     <div className='cardrest'>
-      <div className='toprest'>Restaurant Information</div>
+      <div className='toprest py-1'>Restaurant Information</div>
       <div className='text-end'>
         <button className='Savebtnrest px-2'>Save</button>
       </div>
-      <div className='onerfontstyle'>Owner details</div>
+      <div className='onerfontstyle pb-4'>Owner details</div>
       <Row className='margirowrest mt-1'>
         <Col md={8} className="padingcolrest">
-          <label className='labelfontrest'>Name</label><br />
-          <input className='inputrest' />
-          <label className='labelfontrest'>Mail ID</label><br />
-          <input className='inputrest' />
-          <label className='labelfontrest'>Pincode</label><br />
-          <input className='inputrest' />
+          <div className='py-2'>
+            <label className='labelfontrest'>Name</label><br />
+            <input className='inputrest' />
+          </div>
+          <div className='py-2'>
+            <label className='labelfontrest'>Mail ID</label><br />
+            <input className='inputrest' />
+          </div>
+          <div className='py-2'>
+            <label className='labelfontrest'>Pincode</label><br />
+            <input className='inputrest' />
+          </div>
         </Col>
         <Col md={8} className="padingcolrest">
-          <label className='labelfontrest'>Mobile number</label><br />
-          <input className='inputrest' />
-          <label className='labelfontrest'>Whats up Number</label><br />
-          <input className='inputrest' />
-          <label className='labelfontrest'>City</label><br />
-          <input className='inputrest' />
+          <div className='py-2'>
+            <label className='labelfontrest'>Mobile number</label><br />
+            <input className='inputrest' />
+          </div>
+          <div className='py-2'>
+            <label className='labelfontrest'>Whats up Number</label><br />
+            <input className='inputrest' />
+          </div>
+          <div className='py-2'>
+            <label className='labelfontrest'>City</label><br />
+            <input className='inputrest' />
+          </div>
         </Col>
         <Col md={8} className="padingcolrest">
           <label className='labelfontrest'>Address</label><br />
@@ -41,7 +53,7 @@ const Restaurant_owner = () => {
                 <div className=''>Upload Image</div>
 
               </div>
-            </div> 
+            </div>
             <div className='dargfont py-1 text-center'>Drag & Drop to upload or <span className='brosefont'>Browse</span></div>
           </div>
         </Col>

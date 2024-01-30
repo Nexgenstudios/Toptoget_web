@@ -151,7 +151,7 @@
     background: #588A7A;
     color: #FFF;
     font-family: inter;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -163,26 +163,71 @@
     background: #E2F6D3;
     color: #669583;
     font-family: inter;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 
-.btnflex{
+.btnflex {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     padding: 1rem 1rem 1rem 3rem;
 }
 
+.proflefont {
+    color: #4C4C4C;
+    margin-left: 2%;
+    font-family: inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.bellicon {
+    display: block;
+}
+
+.notificationstyle {
+    display: block;
+}
+
+.notificationstyle1 {
+    display: none;
+}
+
 @media(max-width: 768px) {
+    .notificationstyle {
+        display: block;
+    }
+
+    .notificationstyle1 {
+        display: block;
+    }
+
+    .bellicon {
+        display: none;
+    }
+
+    .proflefont {
+        color: #4C4C4C;
+        margin-left: 0%;
+        font-family: inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
     .cardredieos {
         border-radius: 10px;
         margin: 1rem 0rem;
         padding: 1rem 1rem;
     }
-    .btnflex{
+
+    .btnflex {
         display: flex;
         flex-direction: column;
         gap: 1rem;

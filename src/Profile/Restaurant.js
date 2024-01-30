@@ -164,11 +164,11 @@ const Restaurant = () => {
     }
     return (
         <div className='cardrest'>
-            <div className='toprest'>Restaurant Information</div>
+            <div className='toprest py-1'>Restaurant Information</div>
             <div className='text-end'>
                 <button className='Savebtnrest px-2'>Save</button>
             </div>
-            <div className='onerfontstyle'>Restaurant Contact & Address</div>
+            <div className='onerfontstyle pb-4'>Restaurant Contact & Address</div>
             <Form onSubmit={(e) => submitForm(e)}>
                 <Row className='margirowrest mt-1'>
                     <Col md={8} className="padingcolrest">
@@ -263,7 +263,6 @@ const Restaurant = () => {
                             }
                         </FormGroup>
                     </Col>
-                    {/*<Maptoto/>*/}
                     <div className='mapcard my-2'>
                         <iframe
                             // title={address}
@@ -317,11 +316,11 @@ const Restaurant = () => {
                             }
                         </FormGroup>
                     </Col>
-                    <Col md={12}>
+                    <Col md={12} className='px-4'>
                         <button className='addbtnrest mt-4'>+ ADD TIME</button>
                     </Col>
-                    <Col md={12} className="text-end w-100">
-                        <button className='Submitbtnreat px-4 mt-4' type='submit'>Submit</button>
+                    <Col md={12} className="text-end w-100 px-3">
+                        <button className='Submitbtnreat px-4 mt-4 py-1' type='submit'>Submit</button>
                     </Col>
                 </Row>
             </Form>
