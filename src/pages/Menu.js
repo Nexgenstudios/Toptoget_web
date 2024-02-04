@@ -42,26 +42,32 @@ const Menu = ({ childran }) => {
         {
             id: 0,
             southitem: "South Indian",
+            submenu: ["South Indian", "Gulab Jumun", "Bread Halwa", "Rasmalai", "Moong Dal"]
         },
         {
             id: 1,
             southitem: "Dessert",
+            submenu: ["Dessert", "Gulab Jumun", "Bread Halwa", "Rasmalai", "Moong Dal"]
         },
         {
             id: 2,
             southitem: "Lunch",
+            submenu: ["Lunch", "Gulab Jumun", "Bread Halwa", "Rasmalai", "Moong Dal"]
         },
         {
             id: 3,
             southitem: "Combo",
+            submenu: ["Combo", "Gulab Jumun", "Bread Halwa", "Rasmalai", "Moong Dal"]
         },
         {
             id: 5,
             southitem: "icecreams",
+            submenu: ["icecreams", "Gulab Jumun", "Bread Halwa", "Rasmalai", "Moong Dal"]
         },
         {
             id: 6,
             southitem: "icecreams",
+            submenu: ["Gulab Jumun", "Bread Halwa", "Rasmalai", "Moong Dal", "icecreams",]
         },
     ]
     const [order, setOrder] = useState(true);
@@ -75,6 +81,43 @@ const Menu = ({ childran }) => {
     const handledropdown = (item) => {
         setOrder({ ...order, [item.id]: !order[item.id] });
     };
+    const [shortlist, setShortlist] = useState(false);
+    const [slectcheck, setSelectcheck] = useState([]);
+    // const handleFormChange = (id) => {
+    //     setSelectcheck((prev) => {
+    //         const isChecked = prev.includes(id);
+    //         setShortlist(!prev.includes(id));
+    //         if (isChecked === true) {
+    //             return prev.filter((item) => item !== id);
+    //         } else {
+    //             return [...prev, id];
+    //         }
+    //     });
+    // };
+    const handleFormChange = (id) => {
+        setSelectcheck(prev => {
+            const isChecked = prev.includes(id);
+            const updatedItems = isChecked ? prev.filter(item => item !== id) : [...prev, id];
+            setSelectedItems(updatedItems);
+            return updatedItems;
+        });
+    };
+
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedItems, setSelectedItems] = useState([]);
+
+    const handleCategoryClick = (categoryId) => {
+        setSelectedCategory(categoryId === selectedCategory ? null : categoryId);
+    };
+    useEffect(() => {
+        const southIndianCategory = soutMenu.find(item => item.southitem === "South Indian");
+        if (southIndianCategory) {
+            setSelectedCategory(southIndianCategory.id);
+            setSelectedItems(southIndianCategory.submenu);
+            setSelectcheck(southIndianCategory.submenu.map(item => item));
+        }
+    }, []);
+
     return (
         <div className="layoutView w-full bg-white h-screen mt-14 lg:mt-0 rounded-tl-[50px] rounded-tr-[50px] lg:rounded-tr-[0px] lg:rounded-l-[50px] p-3 overflowhome">
             <div className="rounded-full px-6 py-3 bg-[#F4F8E2] border-[#D1D1D1] border-[1.5px]">
@@ -84,7 +127,7 @@ const Menu = ({ childran }) => {
                     </div>
                     <div className="w-full md:w-3/6 m-auto">
                         <div className="flex flex-wrap justify-center align-middle items-center md:justify-end">
-                            <div className="w-1/5 w-md-1/5 flex justify-end justify-md-end" style={{ position: "relative", zIndex: "10" }}>
+                            <div className="w-1/5 w-md-1/5 flex justify-end justify-md-end">
                                 <FaRegBell size={50} className="FaRegBell w-2/5 border-[2px] text-[#96C872] py-3 my-2 mx-2 rounded-lg border-[#ABD28E] cursor-pointer max-w-[50px] w-full duration-150 hover:text-[#588A7A]" onClick={() => setToggle(!toggle)} />
                             </div>
                             {toggle &&
@@ -118,7 +161,7 @@ const Menu = ({ childran }) => {
                                                             {order[item.id] && (
                                                                 <div>
                                                                     <hr />
-                                                                    <div className="content_bspan my-2 text-center px-2"> {item.discription} </div>
+                                                                    <div className="content_bspan my-2 text-start px-2"> {item.discription} </div>
                                                                 </div>
                                                             )}
                                                         </div>
@@ -153,81 +196,49 @@ const Menu = ({ childran }) => {
                                 )
                             })}
                         </div>
-                    </div>
-                    <div className="menuflex">
-                        <div className="cardmenu18">
-                            <div className='toprestmenu py-1'>CATEGORY    I     18</div>
-                            <div className="addflex">
-                                <button className="addbtnrest">+ Add New</button>
-                                <Input className="menuinpu" placeholder="Search" prefix={<IoMdSearch />} />
+
+                        <div className="menuflex">
+                            <div className="cardmenu18">
+                                <div className='toprestmenu py-1'>CATEGORY    I     18</div>
+                                <div className="addflex">
+                                    <button className="addbtnrest">+ Add New</button>
+                                    <Input className="menuinpu" placeholder="Search" prefix={<IoMdSearch />} />
+                                </div>
+                                {soutMenu.map((p, index) => {
+                                    return (
+                                        <div className={` ${selectedCategory === p.id ? 'active southmenuactivemenu ' : 'southmenu'}`} key={index} onClick={() => handleCategoryClick(p.id)}>
+                                            <div className={selectedCategory === p.id ? 'active' : ''}>{p.southitem}</div>
+                                            <FormGroup switch>
+                                                <Input type="switch" role="switch" className="switchinput" key={index} checked={!slectcheck.includes(p.id)} onChange={() => handleFormChange(p.id)}
+                                                />
+                                            </FormGroup>
+                                        </div>
+                                    )
+                                })}
                             </div>
-                            {soutMenu.map((p, index) => {
-                                return (
-                                    <div className="southmenu">
-                                        <div>{p.southitem}</div>
-                                        <FormGroup switch>
-                                            <Input type="switch" role="switch" className="switchinput" key={index} checked={p.id ? state : !state}
-                                                onClick={() => {
-                                                    setState(!state);
-                                                }} />
-                                        </FormGroup>
+
+                            <div className="cardmenu181">
+                                <div className='toprest py-1'>Item   I   5</div>
+                                <div className="addflex">
+                                    <button className="addbtnrest">+ Add New</button>
+                                    <Input className="menuinpu" placeholder="Search" prefix={<IoMdSearch />} />
+                                </div>
+                                {selectedCategory !== null &&
+                                    <div>
+                                        {soutMenu.find(item => item.id === selectedCategory).submenu.map((item, index) => (
+                                            <div key={index} className={`southmenuitem ${selectedItems.includes(item) ? 'active' : ''}`}>
+                                                {item}
+                                                <FormGroup switch>
+                                                    <Input type="switch" role="switch" className="switchinput" checked={true} />
+                                                </FormGroup>
+                                            </div>
+                                        ))}
                                     </div>
-                                )
-                            })}
-                        </div>
-                        <div className="cardmenu181">
-                            <div className='toprest py-1'>Item   I   5</div>
-                            <div className="addflex">
-                                <button className="addbtnrest">+ Add New</button>
-                                <Input className="menuinpu" placeholder="Search" prefix={<IoMdSearch />} />
-                            </div>
-                            <div className="southmenuitem">
-                                <div>Gulab Jumun</div>
-                                <FormGroup switch>
-                                    <Input type="switch" role="switch" className="switchinput" checked={state}
-                                        onClick={() => {
-                                            setState(!state);
-                                        }} />
-                                </FormGroup>
-                            </div>
-                            <div className="southmenuitem">
-                                <div>Bread Halwa</div>
-                                <FormGroup switch>
-                                    <Input type="switch" role="switch" className="switchinput" checked={state}
-                                        onClick={() => {
-                                            setState(!state);
-                                        }} />
-                                </FormGroup>
-                            </div>
-                            <div className="southmenuitem">
-                                <div>Rasmalai</div>
-                                <FormGroup switch>
-                                    <Input type="switch" role="switch" className="switchinput" checked={state}
-                                        onClick={() => {
-                                            setState(!state);
-                                        }} />
-                                </FormGroup>
-                            </div>
-                            <div className="southmenuitem">
-                                <div>Moong Dal</div>
-                                <FormGroup switch>
-                                    <Input type="switch" role="switch" className="switchinput" checked={state}
-                                        onClick={() => {
-                                            setState(!state);
-                                        }} />
-                                </FormGroup>
-                            </div>
-                            <div className="southmenuitem">
-                                <div>Gulab Jumun</div>
-                                <FormGroup switch>
-                                    <Input type="switch" role="switch" className="switchinput" checked={!state}
-                                        onClick={() => {
-                                            setState(!state);
-                                        }} />
-                                </FormGroup>
+                                }
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

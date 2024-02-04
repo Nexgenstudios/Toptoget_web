@@ -4,6 +4,7 @@ import { Col, Row } from 'antd'
 import Maptoto from "../Comman/Maptoto"
 import { Form, FormFeedback, FormGroup, Input, Label } from 'reactstrap'
 import { DEFAULT_REG_FORM, REGISTRATION_FIELDS } from "./MockProfile"
+import { useNavigate } from 'react-router-dom'
 const Restaurant = () => {
     const address = "basavanagudi, Bengaluru,  Karnataka, M4";
     const search = `https://maps.google.com/maps?q=${address}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
@@ -17,13 +18,15 @@ const Restaurant = () => {
             </FormFeedback>
         )
     }
+    let navigate = useNavigate();
     const submitForm = (e) => {
         e.preventDefault();
         // context.setLoadingMask(true)
         let validateForm = validateRegistrationForm();
+        setErrorMessage(validateForm);
         if (validateForm.isValidationFailed) {
             setErrorMessage(validateForm);
-            // context.setLoadingMask(false)
+            navigate("/ownerprofile")
         }
     }
     const validateRegistrationForm = () => {
@@ -36,7 +39,7 @@ const Restaurant = () => {
                 isValidationFailed: true
             }
         }
-       
+
         if (formData.Landline_number === '') {
             errorMessage = {
                 ...errorMessage,
@@ -101,7 +104,7 @@ const Restaurant = () => {
         if (formData.Pincode !== '' && formData.Pincode.length !== 6) {
             errorMessage = { ...errorMessage, Pincode: 'Pincode length should be 6 digits', isValidationFailed: true }
         }
-        else if(formData.Pincode == '') {
+        else if (formData.Pincode == '') {
             errorMessage = {
                 ...errorMessage,
                 Pincode: "Please Enter the Pin Code"
@@ -153,7 +156,7 @@ const Restaurant = () => {
                     <Col md={8} className="padingcolrest">
                         <FormGroup>
                             <Label className='labelfontrest'>Mobile number</Label><br />
-                            <Input className='inputrest' type="text" name={REGISTRATION_FIELDS.MOBILE_NUMBER}
+                            <Input className='inputrest' type="number" name={REGISTRATION_FIELDS.MOBILE_NUMBER}
                                 onChange={handleChange}
                                 value={personalInfo.Mobile_number}
                                 invalid={errorMessage.Mobile_number === '' ? false : true} />
@@ -165,7 +168,7 @@ const Restaurant = () => {
                     <Col md={8} className="padingcolrest">
                         <FormGroup>
                             <Label className='labelfontrest'>Landline number</Label><br />
-                            <Input className='inputrest' type="text" name={REGISTRATION_FIELDS.LANDLINE_NUMBER}
+                            <Input className='inputrest' type="number" name={REGISTRATION_FIELDS.LANDLINE_NUMBER}
                                 onChange={handleChange}
                                 value={personalInfo.Landline_number}
                                 invalid={errorMessage.Landline_number === '' ? false : true} />

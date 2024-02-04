@@ -12,6 +12,7 @@ import Myprofile from './pages/Myprofile';
 import Availability from './MenuDetials/Availability';
 import MenuEditor from './MenuDetials/MenuEditor';
 import MenuHistory from './MenuDetials/MenuHistory';
+import Restaurant_owner from './Profile/Restaurant_owner';
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Menuhistory" element={<MenuHistory/>} />
           <Route path="/Menueditor" element={<MenuEditor/>} />
           <Route path="/Profile" element={<Profile />} />
+          <Route path="/ownerprofile" element={<Restaurant_owner />} />
           <Route path="/Orders" element={<Orders />} />
           <Route path="/Settings" element={<Settings />} />
           <Route path="/Help" element={<Help />} />

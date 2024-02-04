@@ -79,6 +79,55 @@
     line-height: normal;
 }
 
+.southmenuedit {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 1.298px solid #CAE3B7;
+    background: #FFF;
+    margin: 1rem 1rem;
+    color: #85AFA2;
+    font-family: Inter;
+    font-size: 18.982px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.southmenuactive {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 1.298px solid rgba(65, 151, 0, 1);
+    background: rgba(245, 255, 238, 1);
+    margin: 1rem 1rem;
+    color: #85AFA2;
+    font-family: Inter;
+    font-size: 18.982px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.southmenuactivemenu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 1.298px solid rgba(65, 151, 0, 1);
+    background: rgba(245, 255, 238, 1);
+    margin: 1rem 1rem;
+    color: #85AFA2;
+    font-family: Inter;
+    font-size: 18.982px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.active {
+    font-weight: 800;
+}
+
 .southmenuitem {
     display: flex;
     width: 55%;
@@ -96,11 +145,54 @@
     line-height: normal;
 }
 
+.southmenuitemedit {
+    width: 55%;
+    padding: 0.5rem 0.5rem;
+    border-radius: 15px;
+    border: 1.298px solid #CAE3B7;
+    background: #FFF;
+    margin: 1rem 1rem;
+    color: #85AFA2;
+    font-family: Inter;
+    font-size: 18.982px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .switchinput {
     width: 10vw;
 }
 
+.activeiconsouth {
+    background: #DFF3CF;
+    padding: 0.1rem 0rem;
+    display: flex;
+}
+
+.savebtnmenuedit {
+    border-radius: 30px;
+    background: #588A7A;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.Entermenunamefont{
+    margin-top: -1rem;
+    background: #FFF;
+    width: 40%;
+    text-align: center;
+    color: #588A7A;
+    font-size: 14px;
+}
+
+.menuinpuedit{
+    border: none;
+    background: none;
+}
+
 @media(max-width: 1024px) {
+    
     .toprestmenu {
         border-radius: 9px;
         border: 1px solid #565656;
@@ -117,6 +209,7 @@
         font-weight: 700;
         line-height: normal;
     }
+
     .cardmenu {
         border-radius: 8.5px;
         border: 1px solid #D3E7BF;
@@ -164,6 +257,42 @@
         color: #85AFA2;
         font-family: Inter;
         font-size: 24.982px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .southmenuitemedit {
+        width: 95%;
+        padding: 0.5rem 0.5rem;
+        border-radius: 15px;
+        border: 1.298px solid #CAE3B7;
+        background: #FFF;
+        margin: 1rem 0.5rem;
+        color: #85AFA2;
+        font-family: Inter;
+        font-size: 18.982px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .Entermenunamefont{
+        margin-top: -1rem;
+        background: #FFF;
+        width: 60%;
+        text-align: center;
+        color: #588A7A;
+        font-size: 14px;
+    }
+    .southmenuactive {
+        width: 95%;
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+        border: 1.298px solid rgba(65, 151, 0, 1);
+        background: rgba(245, 255, 238, 1);
+        margin: 1rem 0.5rem;
+        color: #85AFA2;
+        font-family: Inter;
+        font-size: 18.982px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;

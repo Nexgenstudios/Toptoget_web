@@ -58,7 +58,7 @@ const Settings = () => {
           </div>
           <div className="w-full md:w-3/6 m-auto">
             <div className="flex flex-wrap justify-center align-middle items-center md:justify-end">
-              <div className="w-1/5 w-md-1/5 flex justify-end justify-md-end" style={{ position: "relative", zIndex: "10" }}>
+              <div className="w-1/5 w-md-1/5 flex justify-end justify-md-end">
                 <FaRegBell size={50} className="FaRegBell w-2/5 border-[2px] text-[#96C872] py-3 my-2 mx-2 rounded-lg border-[#ABD28E] cursor-pointer max-w-[50px] w-full duration-150 hover:text-[#588A7A]" onClick={() => setToggle(!toggle)} />
               </div>
               {toggle &&
@@ -92,7 +92,7 @@ const Settings = () => {
                                             {order[item.id] && (
                                                 <div>
                                                     <hr />
-                                                    <div className="content_bspan my-2 text-center px-2"> {item.discription} </div>
+                                                    <div className="content_bspan my-2 text-start px-2"> {item.discription} </div>
                                                 </div>
                                             )}
                                         </div>

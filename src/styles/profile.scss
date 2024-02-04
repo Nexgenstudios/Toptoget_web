@@ -180,7 +180,7 @@
     color: #4C4C4C;
     margin-left: 2%;
     font-family: inter;
-    font-size: calc(1.100vw + 1.100vh + 2vmin);
+    font-size: calc(0.8vw + 0.8vh + 2vmin);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -199,6 +199,33 @@
 }
 
 @media(max-width: 768px) {
+    .Restaurantbtn {
+        width: 100%;
+        margin-left: 2%;
+        border-radius: 27px;
+        background: #588A7A;
+        color: #FFF;
+        font-family: inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .Restaurantbtnunactive {
+        width: 100%;
+        margin-left: 2%;
+        border-radius: 27px;
+        border: 1px solid #626A3C;
+        background: #E2F6D3;
+        color: #669583;
+        font-family: inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
     .notificationstyle {
         display: block;
     }
